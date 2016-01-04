@@ -1,8 +1,4 @@
 - @items.each do |item|
-  %h2= link_to item.title
+  %h2= link_to item.title, item
 
-
-
-/ , description, price
-
-/ %p This is my test
+= link_to "new", new_item_path

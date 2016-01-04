@@ -1,9 +1,11 @@
 class ItemsController < ApplicationController
 before_action :find_item, only: [:show, :edit, :update, :destroy]
+# before_action :authenticate_item!
+
 
   def index
     # @items = Item.where(user_id: current_user)
-    @items = Item.all
+    @items = Item.all.order("created_at DESC")
   end
 
   def new
@@ -17,15 +19,26 @@ before_action :find_item, only: [:show, :edit, :update, :destroy]
     if @item.save
       redirect_to @item
     else
-      render "New"
+      render "new"
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    if @item.update(items_params)
+      redirect_to @item
+    else
+      render "Edit"
     end
   end
 
   def destroy
+    @item.destroy
+    redirect_to root_path
   end
 
-  def update
-  end
 
   private
 
