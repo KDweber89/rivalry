@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
 before_action :find_item, only: [:show, :edit, :update, :destroy]
-# before_action :authenticate_item!
+before_action :authenticate_user!
 
 
   def index
@@ -36,9 +36,8 @@ before_action :find_item, only: [:show, :edit, :update, :destroy]
 
   def destroy
     @item.destroy
-    redirect_to root_path
+    redirect_to root_path, notice: "Successfully deleted recipe"
   end
-
 
   private
 
