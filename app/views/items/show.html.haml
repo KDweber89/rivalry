@@ -1,7 +1,10 @@
-%h1= @item.title
-%h3= @item.description
+.wrapper_with_padding
+  #item_show
+    %h1= @item.title
+    %h3= @item.description
 
-= link_to "Home", root_path
-= link_to "Edit", edit_item_path(@item)
-= link_to "Delete", item_path(@item), method: :delete, data: {confirm: "Are you sure?"}
+    .buttons
+      = link_to "Home", root_path
+      = link_to "Edit", edit_item_path(@item)
+      = link_to "Delete", item_path(@item), method: :delete, data: {confirm: "Are you sure?"}
 

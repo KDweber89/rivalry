@@ -1,4 +1,6 @@
-- @items.each do |item|
-  %h2= link_to item.title, item
+.wrapper_with_padding
+  #notes.clearfix
+    - @items.each do |item|
+      %h2= link_to item.title, item
 
-= link_to "new", new_item_path
+    = link_to "new", new_item_path
