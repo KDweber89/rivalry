@@ -4,5 +4,6 @@
       .item
         %h2= link_to item.title, item
         %h4= item.description
+        =image_tag item.image.url(:thumb)
 
     = link_to "new", new_item_path

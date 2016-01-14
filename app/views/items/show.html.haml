@@ -3,6 +3,9 @@
     %h1= @item.title
     %h3= @item.description
 
+    = image_tag @item.image.url(:medium)
+
+
     .buttons
       = link_to "Home", root_path
       = link_to "Edit", edit_item_path(@item)
