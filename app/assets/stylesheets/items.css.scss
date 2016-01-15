@@ -1,0 +1,23 @@
+// Place all the styles related to the items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#items {
+  .item {
+    // background: $dark_gray;
+    background: black;
+    width: 30%;
+    min-height: 150px;
+    margin: 1rem 1%;
+    padding: 1.5rem 2.5%;
+    float: left;
+    border-radius: .4rem;
+    position: relative;
+    .title {
+      // @include bold_font;
+      color: white;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+  }
+}
