@@ -18,9 +18,10 @@
 @import "bootstrap";
 @import 'items.css.scss';
 @import 'normalize.css.scss';
+@import 'buttons.css.scss';
+@import 'global.css.scss';
 
 
-// @import 'global.css.scss';
 // @import 'notes.css.scss';
 
 
@@ -42,30 +43,9 @@ nav {
 }
 
 
-#item_show {
-  .title {
-    // @include bold_font;
-    font-size: 2.5rem;
-    margin-bottom: 1.25rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #E9E9E9;
-  }
-  p {
-    font-size: 1.375rem;
-    line-height: 1.75;
-  }
-  .buttons {
-    margin-top: 3rem;
-    a.button {
-      padding: .5rem 2rem;
-      border-radius: 2rem;
-      text-decoration: none;
-      color: green;
-      border: 5px solid #E9E9E9;
-      // @include bold_font;
-      background: pink;
-    }
-  }
+
+.large{
+  width: 50000000px;
 }
 
 .wrapper {
@@ -81,24 +61,3 @@ nav {
 .clearfix:after {
   clear: both;
 }
-
-
-// #items {
-//   .item {
-//     // background: $dark_gray;
-//     background: black;
-//     width: 30%;
-//     min-height: 150px;
-//     margin: 1rem 1%;
-//     padding: 1.5rem 2.5%;
-//     float: left;
-//     border-radius: .4rem;
-//     position: relative;
-//     .title {
-//       // @include bold_font;
-//       color: white;
-//       margin: 0;
-//       letter-spacing: 1px;
-//     }
-//   }
-// }

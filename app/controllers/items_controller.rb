@@ -4,13 +4,11 @@ before_action :authenticate_user!
 
 
   def index
-    # @items = Item.where(user_id: current_user)
     @items = Item.all.order("created_at DESC")
   end
 
   def new
     @item = Item.new
-    # @items = current_user.items.build
   end
 
   def create

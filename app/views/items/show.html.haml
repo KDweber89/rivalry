@@ -1,13 +1,20 @@
-.wrapper_with_padding
-  #item_show
-    %h1= @item.title
-    %h3= @item.description
+.container
+  .row
+    .col-md-2.col-md-offset-5
+      .center-blocks
+        #item_show
+          .title= @item.title
+          %h3= @item.description
 
-    = image_tag @item.image.url(:medium)
+          = image_tag @item.image.url(:medium)
 
 
-    .buttons
-      = link_to "Home", root_path
-      = link_to "Edit", edit_item_path(@item)
-      = link_to "Delete", item_path(@item), method: :delete, data: {confirm: "Are you sure?"}
+        .buttons
+          .btn.sm.ghost
+            = link_to "Home", root_path
+          .btn.sm.ghost
+            = link_to "Edit", edit_item_path(@item)
+          .btn.sm.ghost
+            = link_to "Delete", item_path(@item), method: :delete, data: {confirm: "Are you sure?"}
+
 
