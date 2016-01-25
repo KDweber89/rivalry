@@ -13,22 +13,6 @@ $secondary: #f3f3f3;
     font-size: 1.375rem;
     line-height: 1.75;
   }
-  .buttons {
-    margin-top: 3rem;
-    border-radius: 2rem;
-    border-color: black;
-    color: black;
-
-    a.button {
-      padding: .5rem 2rem;
-      border-radius: 2rem;
-      text-decoration: none;
-      color: green;
-      border: 5px solid #E9E9E9;
-      // @include bold_font;
-      background: pink;
-    }
-  }
 }
 
 .btn {
@@ -41,8 +25,8 @@ $secondary: #f3f3f3;
   margin-bottom: 5px;
 }
 
-.sm {
-  width: 10%;
+.md {
+  width: 20%;
 }
 
 .ghost {

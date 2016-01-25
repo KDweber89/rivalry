@@ -1,20 +1,25 @@
 .container
   .row
-    .col-md-2.col-md-offset-5
+    / .col-md-5.col-md-offset-3
+    .col-md-5.col-md-offset-1
       .center-blocks
-        #item_show
-          .title= @item.title
-          %h3= @item.description
+        .img
+          = image_tag @item.image.url(:large)
 
-          = image_tag @item.image.url(:medium)
+    .col-md-5.col-md-offset-1
+      #item_show
+        .title
+          = @item.title
+        %h3
+          = @item.description
 
 
         .buttons
-          .btn.sm.ghost
+          .btn.md.ghost
             = link_to "Home", root_path
-          .btn.sm.ghost
+          .btn.md.ghost
             = link_to "Edit", edit_item_path(@item)
-          .btn.sm.ghost
+          .btn.md.ghost
             = link_to "Delete", item_path(@item), method: :delete, data: {confirm: "Are you sure?"}
 
 
