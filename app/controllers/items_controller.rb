@@ -40,7 +40,7 @@ before_action :authenticate_user!
   private
 
   def items_params
-    params.require(:item).permit(:title, :description, :price, :image)
+    params.require(:item).permit(:title, :description, :price, :image, :sub_title)
   end
 
   def find_item

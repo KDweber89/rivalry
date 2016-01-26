@@ -2,17 +2,24 @@
   .row
     / .col-md-5.col-md-offset-3
     .col-md-5.col-md-offset-1
+      #item_show
+        .title
+          = @item.title
+        .subTitle
+          = @item.sub_title
       .center-blocks
-        .img
+        .image
           = image_tag @item.image.url(:large)
 
     .col-md-5.col-md-offset-1
       #item_show
-        .title
-          = @item.title
         %h3
           = @item.description
+        = @item.price
 
+        .buttons
+          .btn.lg.ghost
+            = link_to "Placeholder", root_path
 
         .buttons
           .btn.md.ghost

@@ -1,5 +1,6 @@
 = simple_form_for(@item, html: { multipart: true, class: 'form-horizontal' }) do |form|
   = form.input :title, label: "Item Title"
+  = form.input :sub_title, lable: "sub title"
   = form.input :description, label: "Item Description"
 
   = form.label :image
