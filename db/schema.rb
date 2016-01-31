@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160126031033) do
+ActiveRecord::Schema.define(version: 20160131041137) do
 
   create_table "items", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
-    t.integer  "price",              limit: 4
+    t.datetime "created_at",                                 null: false
+    t.datetime "updated_at",                                 null: false
+    t.decimal  "price",              precision: 6, scale: 2
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
