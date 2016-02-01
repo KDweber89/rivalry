@@ -29,3 +29,11 @@
             = link_to "Edit", edit_item_path(@item)
           .btn.md.ghost
             = link_to "Delete", item_path(@item), method: :delete, data: {confirm: "Are you sure?"}
+
+        .buttons
+          .btn.md.ghost
+            = link_to "Home", root_path
+          .btn.md.ghost
+            = link_to "Edit", edit_item_path(@item)
+          .btn.md.ghost
+            = link_to "Delete", item_path(@item), method: :delete, data: {confirm: "Are you sure?"}

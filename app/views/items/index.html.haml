@@ -2,8 +2,9 @@
   #items.clearfix
     - @items.each do |item|
       .item
-        %h2= link_to item.title, item
-        %h4= item.description
-        =image_tag item.image.url(:thumb)
+        / %h2= link_to item.title, item
+        / %h4= item.description
+        .imagesSizes
+        =image_tag item.image.url, :size => "150x150"
 
     = link_to "new", new_item_path
