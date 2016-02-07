@@ -16,12 +16,24 @@
         %h3
           = @item.price
         %hr
-          = @item.description
 
         .buttons
           .btn.lg.ghost
             = link_to "Placeholder", root_path
 
+          / #item_show
+          /   = link_to "Placeholder", root_path
+
+          / = @item.description
+          %hr
+
+        .aboutMessage
+          %p About this product
+
+          %i.fa.fa-stop-circle-o
+            %p About this product
+
+
         .buttons
           .btn.md.ghost
             = link_to "Home", root_path
@@ -37,3 +49,12 @@
             = link_to "Edit", edit_item_path(@item)
           .btn.md.ghost
             = link_to "Delete", item_path(@item), method: :delete, data: {confirm: "Are you sure?"}
+
+
+        %hr
+
+        .questionStyle
+          %h4 Questions? Call us:
+
+        .phoneStyle
+          %h4 218-535-1760
