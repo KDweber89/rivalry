@@ -21,6 +21,14 @@ before_action :authenticate_user!
     end
   end
 
+  # def test
+  #   number_to_currency(self.price, :unit => "£")
+  # end
+
+  def quid(price)
+    number_to_currency(price, :unit => "£")
+  end
+
   def edit
   end
 
@@ -34,7 +42,7 @@ before_action :authenticate_user!
 
   def destroy
     @item.destroy
-    redirect_to root_path, notice: "Successfully deleted recipe"
+    redirect_to root_path, notice: "Successfully deleted Item"
   end
 
   private

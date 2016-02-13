@@ -1,20 +1,26 @@
 .container
   .row.back
     / .col-md-5.col-md-offset-3
-    .col-md-5.col-md-offset-1
+    .col-md-6.col-md-offset-1.colorRED
       #item_show
         .title
           = @item.title
         .subTitle
           = @item.sub_title
+        %hr
+
       .center-blocks
-        .image
+        .image#single_image
           = image_tag @item.image.url(:large)
 
-    .col-md-5.col-md-offset-1
+    .col-md-4.col-md-offset-1
       #item_show
         %h3
+          / = @item.quid(line_item.price)
           = @item.price
+          = @item.price
+
+          / = @item.price
         %hr
 
         .buttons
@@ -33,15 +39,6 @@
           %i.fa.fa-stop-circle-o
             %p About this product
 
-
-        .buttons
-          .btn.md.ghost
-            = link_to "Home", root_path
-          .btn.md.ghost
-            = link_to "Edit", edit_item_path(@item)
-          .btn.md.ghost
-            = link_to "Delete", item_path(@item), method: :delete, data: {confirm: "Are you sure?"}
-
         .buttons
           .btn.md.ghost
             = link_to "Home", root_path
@@ -55,6 +52,29 @@
 
         .questionStyle
           %h4 Questions? Call us:
-
+          %fa.fa-gratipay test
         .phoneStyle
           %h4 218-535-1760
+
+
+
+:javascript
+
+$(document).ready(function() {
+
+
+  $("#single_image").fancybox();
+
+  $("#inline").fancybox({
+    'hideOnContentClick': true
+  });
+
+  $("a.group").fancybox({
+    'transitionIn'  : 'elastic',
+    'transitionOut' : 'elastic',
+    'speedIn'   : 600,
+    'speedOut'    : 200,
+    'overlayShow' : false
+  });
+
+});

@@ -21,6 +21,7 @@
 @import 'buttons.css.scss';
 @import 'global.css.scss';
 
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
 
 // @import 'notes.css.scss';
 
@@ -42,9 +43,22 @@ nav {
   }
 }
 
-.subTitle{
+.questionStyle{
+  text-transform: uppercase;
   font-size: 10px;
+  font-family: 'Josefin Sans', serif;
+}
+
+
+.colorRED{
+  background: pink;
+  padding-bottom: 14px;
+}
+
+.subTitle{
+  font-size: 15px;
   text-align: center;
+  // padding: 5px;
 }
 
 .title{
