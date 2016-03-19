@@ -2,15 +2,23 @@
   .row.back
     / .col-md-7.col-md-offset-1.colorRED
     .col-md-8.colorRED
-      .image_box
-        #item_show
-          .title
+      #item_show
+        .item_title
+          %h2
             = @item.title
-          .subTitle
-            = @item.sub_title
-          %hr
-          .image#single_image
-            = image_tag @item.image, :size => "20x20"
+        .subTitle
+          = @item.sub_title
+          %br
+      .image_box
+        .col-md-2
+          %p Asymmetrical put a bird on it marfa organic 8-bit,
+
+        .col-md-10
+          %p Asymmetrical put a bird on it marfa organic 8-bit, chillwave fingerstache kogi leggings bespoke brunch pickled lo-fi photo booth. Direct trade literally locavore, irony ugh 3 wolf moon scenester. Distillery chicharrones art party, shabby chic biodiesel literally selvage slow-carb
+
+
+        / .image#single_image
+        /   = image_tag @item.image, :size => "20x20"
 
       / .center-blocks
       /   .image#single_image
