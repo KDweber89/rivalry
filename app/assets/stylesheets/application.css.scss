@@ -63,19 +63,22 @@ nav {
   // padding: 5px;
 }
 
-.item_title{
+.item-title{
   text-align: center;
   text-transform: uppercase;
 }
 
 .image{
   margin: 0 auto;
-  // width: 5000000px;
 }
 
 
-.large{
-  width: 50000000px;
+.large-image{
+  max-width: 500px;
+  max-height: 500px;
+  width: auto;
+  height: auto;
+  overflow: hidden;
 }
 
 .wrapper {
