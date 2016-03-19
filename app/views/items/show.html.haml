@@ -19,25 +19,16 @@
         .col-md-10
           .large-image
             = image_tag @item.image
-            / %p Asymmetrical put a bird on it marfa organic 8-bit, chillwave fingerstache kogi leggings bespoke brunch pickled lo-fi photo booth. Direct trade literally locavore, irony ugh 3 wolf moon scenester. Distillery chicharrones art party, shabby chic biodiesel literally selvage slow-carb
-
-
-
-      / .center-blocks
-      /   .image#single_image
-      /     = image_tag @item.image
-
-      / # =link_to image_tag(item.image.url, :size => "200x200"), item
-
 
 
     .col-md-3.col-md-offset-1
       #item-show
-        %h3
-          / = @item.quid(line_item.price)
-          = @item.price
-          = @item.price
-        %hr
+        .item-price
+          %h4
+            = number_to_currency(@item.price)
+          %hr
+
+
 
         .buttons
           .btn.lg.ghost

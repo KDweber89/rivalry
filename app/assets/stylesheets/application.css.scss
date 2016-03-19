@@ -59,8 +59,6 @@ nav {
   font-size: 20px;
   padding-left: 15px;
   padding-bottom:15px;
-  // text-align: center;
-  // padding: 5px;
 }
 
 .item-title{
@@ -68,10 +66,14 @@ nav {
   text-transform: uppercase;
 }
 
+.item-price{
+  color: red;
+}
+
+
 .image{
   margin: 0 auto;
 }
-
 
 .large-image{
   max-width: 500px;
