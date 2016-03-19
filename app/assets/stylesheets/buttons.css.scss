@@ -1,28 +1,20 @@
 $primary: #F07444;
 $secondary: #f3f3f3;
 
-#item-show {
-  .title {
-    // @include bold_font;
-    font-size: 2.5rem;
-    margin-bottom: 1.25rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #E9E9E9;
-  }
-  p {
-    font-size: 1.375rem;
-    line-height: 1.75;
-  }
-}
 
 .btn {
-  display: inline-block;
+  // display: inline-block;
   border-radius: 2px;
   border: none;
   height: 45px;
   padding: 0;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.buttons{
+  margin: auto;
+  position: relative;
 }
 
 .md {

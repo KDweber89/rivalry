@@ -22,18 +22,14 @@
 
 
     .col-md-3.col-md-offset-1
-      #item-show
+      .item-information
         .item-price
-          %h4
-            = number_to_currency(@item.price)
-          %hr
-
-
+          = number_to_currency(@item.price)
+        %hr
 
         .buttons
           .btn.lg.ghost
             = link_to "Placeholder", root_path
-          / = @item.description
           %hr
 
         .aboutMessage
@@ -42,13 +38,6 @@
           %i.fa.fa-stop-circle-o
             %p About this product
 
-        .buttons
-          .btn.md.ghost
-            = link_to "Home", root_path
-          .btn.md.ghost
-            = link_to "Edit", edit_item_path(@item)
-          .btn.md.ghost
-            = link_to "Delete", item_path(@item), method: :delete, data: {confirm: "Are you sure?"}
         %hr
 
         .questionStyle
@@ -57,7 +46,14 @@
         .phoneStyle
           %h4 218-535-1760
 
-
+  .col-md-6.col-md-offset-4
+    .buttons
+      .btn.md.ghost
+        = link_to "Home", root_path
+      .btn.md.ghost
+        = link_to "Edit", edit_item_path(@item)
+      .btn.md.ghost
+        = link_to "Delete", item_path(@item), method: :delete, data: {confirm: "Are you sure?"}
 
 :javascript
 
